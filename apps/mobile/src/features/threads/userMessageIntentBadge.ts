@@ -15,7 +15,7 @@ export function resolveUserMessageIntentBadge(
 ): UserMessageIntentBadgePresentation | null {
   if (unread && (intent === "steer" || intent === "promoted_queued_to_steer")) {
     return {
-      label: resolve(msg("Steer · waiting to be read")),
+      label: resolve(msg("Steered · waiting to be read")),
       accessibilityLabel: resolve(
         msg("Steer waiting for the agent to read it after the running command finishes"),
       ),
@@ -24,12 +24,12 @@ export function resolveUserMessageIntentBadge(
   switch (intent) {
     case "steer":
       return {
-        label: resolve(msg("Steer", { $context: "badge, message sent into the running turn" })),
+        label: resolve(msg("Steered", { $context: "badge, message sent into the running turn" })),
         accessibilityLabel: resolve(msg("Steered the active turn")),
       };
     case "promoted_queued_to_steer":
       return {
-        label: resolve(msg("Steer", { $context: "badge, message sent into the running turn" })),
+        label: resolve(msg("Steered", { $context: "badge, message sent into the running turn" })),
         accessibilityLabel: resolve(
           msg("Originally queued, then promoted to steer the active turn"),
         ),

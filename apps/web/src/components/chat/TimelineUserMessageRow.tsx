@@ -1158,8 +1158,8 @@ function UserMessageIntentMarker({
       >
         <Redo2Icon aria-hidden="true" className="size-3" />
         {unread
-          ? gt("Steer · waiting to be read")
-          : gt("Steer", { $context: "noun, a message that steers the running turn" })}
+          ? gt("Steered · waiting to be read")
+          : gt("Steered", { $context: "badge, a message sent into the running turn" })}
       </TooltipTrigger>
       <TooltipPopup side="top">
         {unread
